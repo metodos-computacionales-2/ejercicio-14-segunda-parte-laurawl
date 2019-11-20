@@ -26,8 +26,8 @@ double f1(double y0)
 }
 void euler(double t, double h, double &y0, double &y1)
 {
-     y1=y0+h*f1(y1);
-     y0=y1+h*f0(y0);
+     y1=y1+h*f1(y1);
+     y0=y0+h*f0(y0);
 }
 int main()
 {
