@@ -26,8 +26,8 @@ double f1(double y0)
 }
 void euler(double t, double h, double &y0, double &y1)
 {
-     y1=y1+h*f1(y1);
-     y0=y0+h*f0(y0);
+     y1=y1+h*f1(y0);
+     y0=y0+h*f0(y1);
 }
 int main()
 {
@@ -37,7 +37,7 @@ int main()
   double x, v;
   x = 1;
   v = 0;
-    for(int i=0; i<=1000;i+=DeltaT)
+    for(int i=0; i<=1000;i++)
     {
       file<<i<<" "<<x<<" "<<v<<"\n";
       euler(i,DeltaT,x,v);

@@ -25,7 +25,7 @@ int main(void)
   double x, v, time;
   x = 1;
   v = 0;
-  for(time = 0; time <= 1000; time += DeltaT) {
+  for(time = 0; time <= 1000; time ++ ) {
     file << time << " " << x << " " << v << "\n";
     rk4(time, DeltaT, x, v);
   }
